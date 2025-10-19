@@ -13,13 +13,13 @@
 
 ### Resources
 
-[Python Glossary](https://realpython.com/ref/glossary/)
-[Python Reference](https://realpython.com/ref/)
-[Python’s Built-in Data Types | Reference](https://realpython.com/ref/builtin-types/)
-[Basic Data Types in Python](https://realpython.com/python-data-types/)
+- [Python Glossary](https://realpython.com/ref/glossary/)
+- [Python Reference](https://realpython.com/ref/)
+- [Python’s Built-in Data Types | Reference](https://realpython.com/ref/builtin-types/)
+- [Basic Data Types in Python](https://realpython.com/python-data-types/)
+- [Strings and Character Data in Python](https://realpython.com/python-strings/)
 
 ### To Study
 
 - [Functional Programmin in Python](https://realpython.com/python-functional-programming/)
-
 - [Object-Oriented Programming (OOP) in Python](https://realpython.com/python3-object-oriented-programming/)
