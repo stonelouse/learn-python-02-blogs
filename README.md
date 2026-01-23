@@ -23,6 +23,7 @@
 
 - [Functional Programming in Python](https://realpython.com/python-functional-programming/)
 - [Object-Oriented Programming (OOP) in Python](https://realpython.com/python3-object-oriented-programming/)
+- [Python's Mutable vs Immutable Types: What's the Difference?](https://realpython.com/python-mutable-vs-immutable-types/)
 
 ### Explore dev container
 
