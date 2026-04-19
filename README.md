@@ -3,9 +3,78 @@
 - Python notes from blogs
 
 - [learn-python-02-blogs](#learn-python-02-blogs)
+  - [Python Tooling Setup (Workspace)](#python-tooling-setup-workspace)
+    - [Why this path for the virtual environment?](#why-this-path-for-the-virtual-environment)
+    - [Daily workflow](#daily-workflow)
+    - [Before writing new code](#before-writing-new-code)
   - [Real Python](#real-python)
     - [Resources](#resources)
     - [To Study](#to-study)
+
+## Python Tooling Setup (Workspace)
+
+- One shared virtual environment is used for the whole workspace:
+  `/home/vscode/.venvs/learn-python-02-blogs`
+- The selected interpreter in VS Code is:
+  `/home/vscode/.venvs/learn-python-02-blogs/bin/python`
+- Linting and formatting tool:
+  `ruff`
+- Workspace configuration files:
+  - `.vscode/settings.json`
+  - `.vscode/extensions.json`
+  - `pyproject.toml`
+
+Configured behavior:
+
+- Format Python files on save
+- Run Ruff linting in-editor
+- Keep imports organized via Ruff code actions
+
+CLI checks:
+
+```bash
+/home/vscode/.venvs/learn-python-02-blogs/bin/ruff check .
+/home/vscode/.venvs/learn-python-02-blogs/bin/ruff format --check .
+```
+
+Auto-fix and format:
+
+```bash
+/home/vscode/.venvs/learn-python-02-blogs/bin/ruff format .
+/home/vscode/.venvs/learn-python-02-blogs/bin/ruff check .
+```
+
+### Why this path for the virtual environment?
+
+Creating `.venv` directly in this workspace failed in the current container filesystem because
+venv symlink creation (`lib -> lib64`) is not permitted here.
+Using `/home/vscode/.venvs/...` avoids that issue and stays persistent across sessions.
+
+### Daily workflow
+
+1. Open workspace in the dev-container.
+2. Ensure the interpreter is `/home/vscode/.venvs/learn-python-02-blogs/bin/python`.
+3. Write code.
+4. Save files and let Ruff format + lint automatically.
+5. Before commit, run Ruff check/format commands once from terminal.
+
+### Before writing new code
+
+Minimal preparation checklist:
+
+1. Confirm VS Code interpreter points to the workspace environment.
+2. Confirm Ruff extension is enabled.
+3. Run:
+
+   ```bash
+   /home/vscode/.venvs/learn-python-02-blogs/bin/ruff check .
+   ```
+
+4. If adding external dependencies:
+   - install into this environment only
+   - document them in project notes or dependency files
+
+You do not need special extra steps for every new file beyond this checklist.
 
 ## Real Python
 

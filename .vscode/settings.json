@@ -1,6 +1,19 @@
 {
   "cSpell.words": [
     "Strg"
-],
-"editor.tabSize": 2
+  ],
+  "editor.tabSize": 2,
+  "python.defaultInterpreterPath": "/home/vscode/.venvs/learn-python-02-blogs/bin/python",
+  "python.terminal.activateEnvironment": true,
+  "ruff.nativeServer": "on",
+  "ruff.lint.run": "onType",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.ruff": "explicit",
+      "source.organizeImports.ruff": "explicit"
+    },
+    "editor.tabSize": 4
+  }
 }
